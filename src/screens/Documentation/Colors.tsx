@@ -3,11 +3,17 @@ import { Row, Col } from 'react-grid-system';
 import { Title, Box } from '@components';
 import { tokens } from '@theme';
 
+export interface ColorsObj {
+  name: string;
+  hex: string;
+}
+
 const buildColor = () => {
   const { color } = tokens;
 
   const getNameColors = () => {
-    const arr: React.ReactNode[] = [];
+    const arr: ColorsObj[] = [];
+
     for (var name in color) {
       arr.push({ name, hex: color[name] });
     }

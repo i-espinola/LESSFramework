@@ -1,3 +1,3 @@
-export * as colorAleatory from './colorAleatory';
-export * as stringAlphanumeric from './stringAlphanumeric';
-export * as stringNumbers from './stringNumbers';
+export * from './colorAleatory';
+export * from './stringAlphanumeric';
+export * from './stringNumbers';
