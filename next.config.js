@@ -13,6 +13,13 @@ module.exports = {
     autoPrerender: true,
   },
   env: {},
+  redirects: async () => [
+    {
+      source: '/',
+      destination: '/doc',
+      permanent: false,
+    },
+  ],
   webpack: (config, options) => {
     config.module.rules.push({
       rules: [

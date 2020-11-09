@@ -7,7 +7,7 @@ export interface HeaderProps {
   autoHidden?: boolean;
 }
 
-const Header = React.forwardRef((props: HeaderProps, ref) => {
+const Header = React.forwardRef((props: HeaderProps, ref: any) => {
   const [visible, setVisible] = useState(true);
   let lastScroll = 0;
 
@@ -26,14 +26,16 @@ const Header = React.forwardRef((props: HeaderProps, ref) => {
   }, []);
 
   return (
-    <HeaderStyled className={visible ? '' : 'auto-hidden'} ref={ref}>
-      <Container>
-        <HeaderItens>
-          <Brand size={16} />
-          <NavBar />
-        </HeaderItens>
-      </Container>
-    </HeaderStyled>
+    <div ref={ref}>
+      <HeaderStyled className={visible ? '' : 'auto-hidden'} ref={ref}>
+        <Container>
+          <HeaderItens>
+            <Brand size={16} />
+            <NavBar />
+          </HeaderItens>
+        </Container>
+      </HeaderStyled>
+    </div>
   );
 });
 
