@@ -1,0 +1,90 @@
+{
+  "name": "lessframework",
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-espinola/LESSFramework.git"
+  },
+  "keywords": [
+    "landing-page",
+    "checkout"
+  ],
+  "author": "Ivan Espinola G.- <ivan.espinola@live.com>",
+  "license": "SEE LICENSE IN <https://github.com/i-espinola/LESSFramework/LICENSE>",
+  "bugs": {
+    "url": "https://github.com/i-espinola/LESSFramework/issues"
+  },
+  "readme": "https://github.com/i-espinola/LESSFramework#readme",
+  "homepage": ".",
+  "scripts": {
+    "clean": "rm -rf ./build ./dist ./.next ./out ./package-lock.json ./yarn.lock ./*.log ./tsconfig.tsbuildinfo",
+    "format": "prettier --write src/**/*.{js, jsx, ts,tsx,scss,css,json}",
+    "lint": "eslint --ext .js,jsx,.ts,.tsx src --color",
+    "server": "npm run clean && next build && next start",
+    "dev": "NODE_OPTIONS='--inspect' next dev",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "@types/isomorphic-fetch": "^0.0.35",
+    "@types/node-fetch": "^2.5.7",
+    "antd": "^4.8.0",
+    "isomorphic-fetch": "^3.0.0",
+    "next": "^10.0.0",
+    "node-fetch": "^2.6.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-flexbox-grid": "^2.1.2",
+    "react-grid-system": "^7.1.1",
+    "styled-components": "^5.2.1",
+    "swr": "^0.3.8"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^5.4.0",
+    "@types/antd": "^1.0.0",
+    "@types/next": "^9.0.0",
+    "@types/node": "^14.14.6",
+    "@types/react": "^16.9.55",
+    "@types/react-dom": "^16.9.9",
+    "@types/styled-components": "^5.1.4",
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@typescript-eslint/parser": "^4.6.1",
+    "@zeit/next-source-maps": "^0.0.3",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-styled-components": "^1.11.1",
+    "del-cli": "^3.0.1",
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-import-resolver-babel-module": "^5.2.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.1.2",
+    "prettier-eslint": "^11.0.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "typescript": "^4.0.5"
+  }
+}
