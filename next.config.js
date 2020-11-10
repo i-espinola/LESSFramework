@@ -13,6 +13,10 @@ module.exports = {
     autoPrerender: true,
   },
   env: {},
+  i18n: {
+    locales: ['pt'],
+    defaultLocale: 'pt-BR',
+  },
   redirects: async () => [
     {
       source: '/',
