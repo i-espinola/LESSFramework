@@ -1,6 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-grid-system';
-import { Title, Typography as Comp } from '@components';
+import { Row, Col, Title, Typography as Comp } from '@components';
 
 const Typography = () => {
   return (

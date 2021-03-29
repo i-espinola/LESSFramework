@@ -1,7 +1,6 @@
 import React from 'react';
-import { Container } from 'react-grid-system';
 import { LayoutDefault } from '@layouts';
-import { Title } from '@components';
+import { Container, Title } from '@components';
 import { DocumentationStyle } from './Styled';
 import Head from 'next/head';
 
@@ -12,6 +11,7 @@ import Colors from './Colors';
 import Switch from './Switch';
 import Box from './Box';
 import Brand from './Brand';
+import Range from './Range';
 
 const Documentation = () => {
   return (
@@ -40,6 +40,9 @@ const Documentation = () => {
           {/* START DOC SWITCH  */}
           <Switch />
           {/* END DOC SWITCH  */}
+          {/* START DOC RANGE  */}
+          <Range />
+          {/* END DOC RANGE  */}
           {/* START DOC BOX  */}
           <Box />
           {/* END DOC BOX  */}

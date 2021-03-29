@@ -1,9 +1,7 @@
 import React from 'react';
-import { Row, Col } from 'react-grid-system';
-import { Title, Switch as Comp } from '@components';
+import { Row, Col, Title, Switch as Comp } from '@components';
 
 const Switch = () => {
-  // const [switch, setSwitch] = React.useState(false);
   const [switchOne, setSwitchOne] = React.useState(false);
   const [switchTwo, setSwitchTwo] = React.useState(true);
 

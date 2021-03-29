@@ -7,7 +7,6 @@ import React, {
   useEffect,
   RefObject,
 } from 'react';
-import { ScreenClassProvider } from 'react-grid-system';
 import { Header, Footer, HeroDefault, Status } from '@components';
 import { LayoutStyle } from './Styled';
 import { state } from '@contexts';
@@ -45,14 +44,14 @@ const LayoutDefault = (props: LayoutProps) => {
   if (loading) return <Status loading={true} />;
 
   return (
-    <ScreenClassProvider>
+    <>
       <LayoutStyle theme={{ paddingTop, paddingBottom }}>
         {header ? renderHeader : false}
         {hero ? renderHero : false}
         <main>{children}</main>
         {footer ? renderFooter : false}
       </LayoutStyle>
-    </ScreenClassProvider>
+    </>
   );
 };
 

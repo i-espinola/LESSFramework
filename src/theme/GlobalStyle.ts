@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import 'antd/dist/antd.css';
 import * as tokens from './tokens';
 
 const GlobalStyle = createGlobalStyle`

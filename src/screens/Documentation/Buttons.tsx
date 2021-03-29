@@ -1,6 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-grid-system';
-import { Title, Button, Anchor } from '@components';
+import { Row, Col, Title, Button, Anchor } from '@components';
 import IconEyes from './../../assets/svg/eyes.svg';
 
 const Buttons = () => {

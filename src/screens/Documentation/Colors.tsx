@@ -1,6 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-grid-system';
-import { Title, Box } from '@components';
+import { Row, Col, Title, Box } from '@components';
 import { tokens } from '@theme';
 
 export interface ColorsObj {

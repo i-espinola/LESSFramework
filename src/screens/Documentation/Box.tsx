@@ -1,6 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-grid-system';
-import { Title, Typography, Box as Comp } from '@components';
+import { Row, Col, Title, Typography, Box as Comp } from '@components';
 import { tokens } from '@theme';
 
 const Box = () => {

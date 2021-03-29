@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Container, Row, Col } from 'react-grid-system';
-import { Brand, NavBar } from '@components';
+import { Container, Row, Col, Brand, NavBar } from '@components';
 import { HeaderStyled, HeaderItens } from './Styled';
 
 export interface HeaderProps {

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-grid-system';
-import { Title, Brand as Comp, Box } from '@components';
+import { Row, Col, Title, Brand as Comp, Box } from '@components';
 
 const Brand = () => {
   return (

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-grid-system';
-import { Title, Button, Modal as Comp } from '@components';
+import { Row, Col, Title, Button, Modal as Comp } from '@components';
 
 const Modal = () => {
   const [modal, setModal] = React.useState(false);

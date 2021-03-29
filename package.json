@@ -22,7 +22,7 @@
     "format": "prettier --write src/**/*.{js, jsx, ts,tsx,scss,css,json}",
     "lint": "eslint --ext .js,jsx,.ts,.tsx src --color",
     "server": "npm run clean && next build && next start",
-    "dev": "NODE_OPTIONS='--inspect' next dev",
+    "dev": "next dev",
     "build": "next build",
     "export": "next export",
     "start": "next start"
@@ -40,23 +40,17 @@
     ]
   },
   "dependencies": {
-    "@ant-design/icons": "^4.2.2",
     "@types/isomorphic-fetch": "^0.0.35",
     "@types/node-fetch": "^2.5.7",
-    "antd": "^4.8.0",
     "isomorphic-fetch": "^3.0.0",
     "next": "^10.0.0",
-    "node-fetch": "^2.6.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-flexbox-grid": "^2.1.2",
-    "react-grid-system": "^7.1.1",
     "styled-components": "^5.2.1",
     "swr": "^0.3.8"
   },
   "devDependencies": {
     "@svgr/webpack": "^5.4.0",
-    "@types/antd": "^1.0.0",
     "@types/next": "^9.0.0",
     "@types/node": "^14.14.6",
     "@types/react": "^16.9.55",

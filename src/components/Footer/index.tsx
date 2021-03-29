@@ -1,7 +1,6 @@
 import React, { forwardRef, memo } from 'react';
-import { Container, Row, Col } from 'react-grid-system';
 import { FooterStyle } from './Styled';
-import { CopyRight, Brand } from '@components';
+import { Container, Row, Col, CopyRight, Brand } from '@components';
 
 const PageFooter = forwardRef((props, ref: any) => {
   const emailCompany = (
