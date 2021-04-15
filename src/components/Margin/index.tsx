@@ -1,14 +1,14 @@
 import React from 'react';
 import MarginStyle from './Styled';
 
-export interface ContainerProps {
+export interface MarginProps {
   left?: number;
   top?: number;
   right?: number;
   bottom?: number;
 }
 
-const Margin = ({ left, top, right, bottom }: ContainerProps) => (
+const Margin = ({ left, top, right, bottom }: MarginProps) => (
   <MarginStyle theme={{ left, top, right, bottom }} />
 );
 

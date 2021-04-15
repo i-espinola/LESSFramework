@@ -1,7 +1,7 @@
 import React from 'react';
 import SkeletonStyle from './Styled';
 
-export interface ContainerProps {
+export interface SkeletonProps {
   round?: boolean;
   rows?: number;
   width?: string;
@@ -9,7 +9,7 @@ export interface ContainerProps {
   borderRadius?: string;
 }
 
-const Skeleton = (props: ContainerProps) => {
+const Skeleton = (props: SkeletonProps) => {
   let { borderRadius, width, height, round } = props;
   const rows = Array(props.rows);
 

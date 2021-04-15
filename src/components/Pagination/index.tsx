@@ -8,8 +8,8 @@ import ChevronLeft from '@svg/chevron-left.svg';
 import ChevronLeftAll from '@svg/chevrons-left.svg';
 
 export interface PaginationProps {
-  total?: number;
-  limitPage?: number;
+  total: number;
+  limitPage: number;
   pageCurrent?: number;
 }
 
@@ -48,7 +48,7 @@ const Pagination = (props: PaginationProps) => {
 
   const pageIndex = Array.from(Array(countPages).keys());
   const { pathname, query } = router;
-  const pageCurrent = query.page || props.pageCurrent;
+  const pageCurrent = Number(query.page) || props.pageCurrent || 1;
   const showLastPage = pageCurrent === pageIndex.length;
   const showFirstPage = pageCurrent === 1;
 
@@ -107,7 +107,6 @@ const Pagination = (props: PaginationProps) => {
   );
 
   useEffect(() => {
-    dispatch(pageSizeActions.getPageSize());
     window.scrollTo(0, 0);
     if (!pageCurrent) {
       router.push({
