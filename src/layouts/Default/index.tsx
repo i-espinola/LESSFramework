@@ -21,33 +21,18 @@ export interface LayoutProps {
 
 const LayoutDefault = (props: LayoutProps) => {
   const { header, hero, children, footer, headerAutoHidden } = props;
-  const [paddingBottom, setPaddingBottom] = useState(0);
-  const headerDom: RefObject<HTMLElement> = useRef(null);
-  const footerDom: RefObject<HTMLElement> = useRef(null);
-  const [paddingTop, setPaddingTop] = useState(0);
   const { loading } = useContext(state);
 
-  const renderHeader = <Header autoHidden={headerAutoHidden} ref={headerDom} />;
-  const renderHero = <HeroDefault />;
-  const renderFooter = <Footer ref={footerDom} />;
-
-  const calcMainMargins = () => {
-    setPaddingTop(headerDom?.current?.clientHeight || 0);
-    setPaddingBottom(footerDom?.current?.clientHeight || 0);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', calcMainMargins);
-    return () => window.removeEventListener('resize', calcMainMargins);
-  }, []);
+  const renderHeader = <Header autoHidden={headerAutoHidden} />;
+  const renderFooter = <Footer />;
 
   if (loading) return <Status loading={true} />;
 
   return (
     <>
-      <LayoutStyle theme={{ paddingTop, paddingBottom }}>
+      <LayoutStyle>
         {header ? renderHeader : false}
-        {hero ? renderHero : false}
+        {hero ? <HeroDefault /> : false}
         <main>{children}</main>
         {footer ? renderFooter : false}
       </LayoutStyle>
