@@ -7,12 +7,7 @@ const LayoutStyle = Styled.div`
 
   > main {
     position: relative;
-    padding-top: ${({ theme }) =>
-      `${Number(theme.paddingTop) / Number(tokens.fontSize.base) + 3}rem` ||
-      '3rem'};
-    padding-bottom: ${({ theme }) =>
-      `${Number(theme.paddingBottom) / Number(tokens.fontSize.base) + 3}rem` ||
-      '3rem'};
+    padding-top: 3rem;
   }
 `;
 

@@ -58,7 +58,7 @@
 					"@theme": "./src/theme",
 					"@utils": "./src/utils",
 					"@screens": "./src/screens",
-					"@svg": "./src/assets/svg/*"
+					"@svg": "./src/assets/svg/"
 				}
 			}
 		]
