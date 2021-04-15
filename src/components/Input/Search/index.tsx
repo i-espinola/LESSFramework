@@ -29,7 +29,7 @@ const Search = ({
       />
       {withSubmit && (
         <ButtonContainer>
-          <Button variant="icon" onClick={onSubmit} block>
+          <Button onClick={onSubmit} block>
             <IconSearch />
           </Button>
         </ButtonContainer>
