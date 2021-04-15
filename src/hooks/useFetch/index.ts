@@ -1,11 +1,18 @@
 import useSWR from "swr";
 import { dataFetch } from '@services';
 
-export function useFetch( url: string ) {
+export interface useFetchProps {
+  url: string;
+}
+
+const useFetch = (url: string) => {
   const { data, error } = useSWR(url, async (url: string) => {
-    const data = await dataFetch(url);
+    const data = await dataFetch({url});
     return data;
   });
 
   return { data, error };
 }
+
+export default useFetch;
+export { useFetch };
