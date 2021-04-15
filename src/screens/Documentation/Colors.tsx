@@ -25,39 +25,37 @@ const buildColor = () => {
 const Colors = () => {
   const arrNameColors = buildColor();
 
+  const renderColors = arrNameColors.map((color) => {
+    return (
+      <Col sm={4} key={color?.name}>
+        <div className="flex align-center justify-start">
+          <Box
+            style={{
+              borderRadius: tokens.radius.small,
+              background: color?.hex || '',
+              padding: '0',
+              width: '50px',
+              height: '50px',
+            }}
+          />
+          <div style={{ margin: '10px' }}>
+            <p style={{ margin: '0' }}>
+              name: <b style={{ color: color?.hex }}>{color?.name || ''}</b>
+            </p>
+            <p style={{ margin: '0' }}>
+              code: <b style={{ color: color?.hex }}>{color?.hex || ''}</b>
+            </p>
+          </div>
+        </div>
+      </Col>
+    );
+  });
+
   return (
     <>
       <Title title="Colors" align="left" />
       <Row>
-        {arrNameColors.map((color) => {
-          return (
-            <Col sm={4} key={color?.name}>
-              <div className="flex align-center justify-start">
-                <Box
-                  style={{
-                    borderRadius: tokens.radius.small,
-                    background: color?.hex || '',
-                    padding: '0',
-                    width: '50px',
-                    height: '50px',
-                  }}
-                />
-                <div style={{ margin: '10px' }}>
-                  <p style={{ margin: '0' }}>
-                    name:{' '}
-                    <b style={{ color: color?.hex }}>{color?.name || ''}</b>
-                  </p>
-                  <p style={{ margin: '0' }}>
-                    code:{' '}
-                    <b style={{ color: color?.hex }}>{color?.hex || ''}</b>
-                  </p>
-                </div>
-              </div>
-            </Col>
-          );
-        })}
-        <Col sm={4}></Col>
-        <Col sm={4}></Col>
+        <Col sm={4}>{renderColors}</Col>
       </Row>
     </>
   );

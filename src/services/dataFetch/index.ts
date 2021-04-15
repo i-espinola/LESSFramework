@@ -17,14 +17,14 @@ const defaultOptions = {
   },
 }
 
-const dataFetch = async ({ endpoint = '', options = {} }) => {
+const dataFetch = async ({ url = '', options = {} }) => {
 
   const reqOptions = {
     ...defaultOptions,
     ...options,
   }
 
-  const data = await isoFetch(endpoint, reqOptions);
+  const data = await isoFetch(url, reqOptions);
   return data.json();
 }
 

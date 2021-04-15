@@ -18,7 +18,7 @@
   "readme": "https://github.com/i-espinola/LESSFramework#readme",
   "homepage": ".",
   "scripts": {
-    "clean": "rm -rf ./build ./dist ./.next ./out ./package-lock.json ./yarn.lock ./*.log ./tsconfig.tsbuildinfo",
+    "clean": "rm -rf ./.next ./out ./*.log ./next-env.d.ts",
     "format": "prettier --write src/**/*.{js, jsx, ts,tsx,scss,css,json}",
     "lint": "eslint --ext .js,jsx,.ts,.tsx src --color",
     "server": "npm run clean && next build && next start",
@@ -41,7 +41,6 @@
   },
   "dependencies": {
     "@types/isomorphic-fetch": "^0.0.35",
-    "@types/node-fetch": "^2.5.7",
     "isomorphic-fetch": "^3.0.0",
     "next": "^10.0.0",
     "react": "^17.0.1",
